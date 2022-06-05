@@ -11,21 +11,30 @@ const SearchBar = () => {
             let test = await clientAxios("/current.json?key=e0e9776929174f14b0711940220206&q=" + input)
             //console.log(test.data)
             const {current, location} = test.data
-           addCard({name: input})
-            console.log(current, location)
+           addCard({
+                name: input, 
+                region: location.region,
+                country: location.country,
+                localtime: location.localtime,
+                temp_c: current.temp_c,
+                temp_f: current.temp_f,
+                is_day: current.is_day           
+                })
+            console.log("current: ", current)
+            console.log("location: ", location)
         } catch (error) {
             console.log(error)
         }
     }
     return (<div>
         <form>
-        <input value={input} onChange={(e) => {setInput(e.target.value)
+        <input value={input}  class="form-control" onChange={(e) => {setInput(e.target.value)
         
         }} />
-        
-        <button onClick={search}>
+        <button onClick={search} type="button" className="btn btn-secondary">
         Search Weather
         </button>
+        
         </form>
     </div>);
 };
