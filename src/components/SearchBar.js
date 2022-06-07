@@ -18,7 +18,8 @@ const SearchBar = () => {
                 localtime: location.localtime,
                 temp_c: current.temp_c,
                 temp_f: current.temp_f,
-                is_day: current.is_day           
+                is_day: current.is_day,
+                id: listcards.length           
                 })
             console.log("current: ", current)
             console.log("location: ", location)
@@ -28,7 +29,7 @@ const SearchBar = () => {
     }
     return (<div>
         <form>
-        <input value={input}  class="form-control" onChange={(e) => {setInput(e.target.value)
+        <input value={input}  className ="form-control" onChange={(e) => {setInput(e.target.value)
         
         }} />
         <button onClick={search} type="button" className="btn btn-secondary">

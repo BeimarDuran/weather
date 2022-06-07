@@ -7,14 +7,14 @@ const Card = ({name, region, country, localtime, temp_c, temp_f, is_day}) => {
                 {name}
             </div>
             <div id='info'>
-                {region}-
-                {country}-
-                {localtime}-
-                {temp_c}-
-                {//temp_f
-                }
-                {is_day}
+               Pais: {country}<br/> 
+               Region: {region}<br/>
+               Fecha: {localtime}<br/>
                 </div>
+            <div id='temp'>
+                {temp_c}°c
+
+            </div>
         </div>)
 }
 export default Card;
