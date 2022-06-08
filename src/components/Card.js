@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react'
-const Card = ({name, region, country, localtime, temp_c, temp_f, is_day}) => {
-   
+const Card = ({name, region, country, localtime, temp, iscelcius}) => {
+    console.log(temp)
     return (
         <div id='card'>
             <div id='card-title'> 
@@ -12,7 +12,7 @@ const Card = ({name, region, country, localtime, temp_c, temp_f, is_day}) => {
                Fecha: {localtime}<br/>
                 </div>
             <div id='temp'>
-                {temp_c}°c
+                {temp}{iscelcius ?"°C":"°F"}
 
             </div>
         </div>)

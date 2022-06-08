@@ -12,9 +12,8 @@ const ListCards = () => {
         region={card.region}
         country={card.country}
         localtime={card.localtime}
-        temp_c={card.temp_c}
-        temp_f={card.temp_f}
-        is_day={card.is_day}        
+        temp={card.temp}
+        iscelcius={card.iscelcius}       
         />):null}
     </div>)
 }
